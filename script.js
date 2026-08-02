@@ -60,12 +60,42 @@ const youBtn = document.getElementById("youBtn");
 const answerMessage = document.getElementById("answerMessage");
 const continueBtn = document.getElementById("continueBtn");
 
+
+/* YOU BUTTON ESCAPES */
+
+if(youBtn){
+
+    youBtn.addEventListener("mouseover", () => {
+
+        const x = Math.random() * 250 - 125;
+        const y = Math.random() * 150 - 75;
+
+        youBtn.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+    });
+
+
+    youBtn.addEventListener("click", () => {
+
+        answerMessage.innerHTML =
+        "Wrong answer 😂<br>Try again.";
+
+    });
+
+}
+
+
+/* ME BUTTON IS THE RIGHT ANSWER */
+
 if(meBtn){
 
     meBtn.addEventListener("click", () => {
 
         answerMessage.innerHTML =
-        "Wrong answer 😂<br>Try again.";
+        "Exactly 😌❤️<br>You know the right answer.";
+
+        continueBtn.style.display = "inline-block";
 
     });
 
@@ -84,15 +114,6 @@ if(youBtn){
 
 }
 
-if(continueBtn){
-
-    continueBtn.addEventListener("click", () => {
-
-        changePage(2);
-
-    });
-
-}
 
 /* =========================================
    LOVE LETTER
