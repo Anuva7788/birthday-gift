@@ -66,7 +66,7 @@ if(meBtn){
     meBtn.addEventListener("click", () => {
 
         answerMessage.innerHTML =
-        "Mm.. right 😌<br>But try the other one.";
+        "Mm..correct 😌<br>But try the other one.";
 
     });
 
